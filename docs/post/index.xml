@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Omega.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jun 2019 19:29:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jun 2019 19:29:46 +0000</lastBuildDate>
     
 	<atom:link href="https://jean-baptiste-lasselle.github.io/omega/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,11 @@
     <item>
       <title>Mon Second Article</title>
       <link>https://jean-baptiste-lasselle.github.io/omega/post/mon-second-article/</link>
-      <pubDate>Wed, 26 Jun 2019 19:29:43 +0000</pubDate>
+      <pubDate>Wed, 26 Jun 2019 19:29:46 +0000</pubDate>
       
       <guid>https://jean-baptiste-lasselle.github.io/omega/post/mon-second-article/</guid>
-      <description>Hokus, Pokus ! Somehow, you might discover that this product has a lot to do with CMS, hasnt it in its essence?.
- Say what if I used Hugo to generate a webtsite, that happens to be an MJML-valid document? ( MJML is markup language designed and standardized by MailJet). Say what if I used Hugo to generate a website, that uses a layout and an MJML-valid Hugo Theme / Hugo Theme Layout ?</description>
+      <description>Hokus, Pokus ! ( What if https://www.hokuscms.com/ )
+ Say what if I used Hugo to generate a webtsite, that happens to be an MJML-valid document? ( MJML is markup language designed and standardized by MailJet). Say what if I used Hugo to generate a website, that uses a layout and an MJML-valid Hugo Theme / Hugo Theme Layout ? ( MJML is markup language designed and standardized by MailJet).</description>
     </item>
     
     <item>
