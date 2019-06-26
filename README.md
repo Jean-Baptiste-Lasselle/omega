@@ -3,7 +3,7 @@ The Omega Server, is an evolution towards Angular 8, of the well known https://g
 
 # How it all started
 
-As I was working on a software that had to send e-mails, based on beautiful templates. I found `MJML`, a markup language designed and standardized by `MailJet`, and I soon found a _wysiwyg_ `MJML` editor, which couyld allow my software users to edit new email templates for ther mailing campaigns, all on their own. 
+As I was working on a software that had to send e-mails, based on beautiful templates. I found `MJML`, a markup language designed and standardized by `MailJet`, and I soon found a _wysiwyg_ `MJML` editor, `GrapesJS` which could allow my software users to edit new email templates for their mailing campaigns, all on their own. 
 That editor was a fork of [GrapesJS](https://grapesjs.com/), and I soon found out about the `HTML` editor : 
 * Indeed, my first need was to find out how (and where) my users would persist each new email templates (for a given mailing campaign)
 * So digging into the `MJML` _wysiwyg_ editor's documentation, I really quickly ended up in [GrapesJS](https://grapesjs.com/) 's documentation
