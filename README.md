@@ -44,3 +44,11 @@ Basically here, I soon understood that in order to actually have a Git Persisten
   * inside a container which has git installed, why not a `NodeJS / TypeScript / Swagger / https://github.com/steveukx/git-js ` stack, 
   * and that way the Angular App can _`git clone "FIR_REPO_URI" && git add --all && git commit -m "message from omega user" && git push`_, just out of calling an `OpenAPI`-compliant `RESTful API`.
 
+# Tech Stack
+
+* `NVM`, 
+* `NodeJS`,
+* `typescript`,
+* [`SWAGGER` TO `TYPESCRIPT`] The swagger typescript generator : https://www.npmjs.com/package/swagger-typescript-codegen 
+* [`TYPESCRIPT` TO `SWAGGER`] Re-generate `JSON` or `YAML` config file from Generated Source Code : https://www.npmjs.com/package/typescript-rest-swagger
+* [**`typescript-rest` is ExpressJS' Typesript Extension, perfectly fit for `SWAGGER` `<=>` `TYPESCRIPT`**] : https://github.com/thiagobustamante/typescript-rest
