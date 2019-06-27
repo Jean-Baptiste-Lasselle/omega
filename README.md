@@ -63,10 +63,20 @@ Ouh, and an `OCI` container engine, `Docker`. With `Docker Compose`.
 
 For a start I'll decompose all tasks in this section of the projet 's root `README.md`, before task management / scheduling is managed by a dedicated tool.
 
-* Implement a first RESTfull API Endpoint, using `typescipt-rest`, swagger generator, without any `RxJS`. This Endpoint will be a very simple allowing you to multiply any two positive or null integers.
+* Implement a first RESTfull API Endpoint, using `typescript-rest`, swagger generator, without any `RxJS`. This Endpoint will be a very simple allowing you to multiply any two positive or null integers.
 * Add a new Endpoint, that basically returns a list of text files, among a given set of files, inside a given folder :
   * the endpoint will always return a map : 
-    * key being the path of the file, relative to workspace root,
-    * the mapped value being the actual files itself as binary content. The workspace is a folder inside the `OCI` container, in which the `RESTful API` runs.
+    * `key` being the path of the file, relative to workspace root,
+    * the mapped `value` being the actual files itself as binary content. The workspace is a folder inside the `OCI` container, in which the `RESTful API` runs.
+  * This endpoint will later return an additional tree, to manage workspace, and make the RESTful API stateless : 
+    * it will never "be on this file in the workspace", and later "be on this other file in the workspace", 
+    * because the browser's `SPA` will manage that.
+    * That will make the server-side stateless, and the solution scalable-ready for multi-tenancy /multi-users
+    * and I today believe that it's a definitive classic technique, to _"push everything that is stateful to the SPA"_, in order to make the backend _stateless_.
+    * and to make it all stateless, regarding git operatyions : It will be required to [commit, push, and send a merge/pull request], only ONE FILE AT A TIME, so that merge conflicts can always be easy to resolve, displaying a nice diff window in `Angular Material Design`, when it's time to save. So don't see this as an actual workspace, keeping track of the "workspace 's state", which file has been commit, which has not, etc... SO users will never ever be bound to keep working with a given container.
+    
+
+
+    
     
 
