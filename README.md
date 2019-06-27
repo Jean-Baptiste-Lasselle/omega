@@ -59,6 +59,23 @@ Basically here, I soon understood that in order to actually have a Git Persisten
 
 Ouh, and an `OCI` container engine, `Docker`. With `Docker Compose`.
 
+### But there's one more thing
+
+yeah, I have as goal, to bring in dependency injection : 
+
+* As to the Angular Client, well dependency injection is builtin `Angular`
+* As to my `typescript-rest` / RESTful Endpoints, there is no depndency injection there.
+
+
+### Infrastructure Tech Stack
+
+* A single host deployement target, consisting of a Virutal MAchine in which are provisioned `docker` and `docker-compose`.
+* `Omega` si provisioned with a `docker-compose.yml` file defining the following services : 
+  * `Traefik.io` as reverse proxy AND load balancer
+  * An API Gateway to bind up all Endpoints, and manage subscribe plans, and centralize `OpenAPI` documentation. I'll use an API Gateway called `Gravitee.io`
+  * One `docker-compose` service for each and every `REST API Endpoint`
+  * One `docker-compose` service for statically serving the Angular Client from within inside a container endowed with the lightest production-ready HTTP statis server, my first (maybe not last) choice will be an `alpine:nginx` `OCI` base image. 
+
 # TODO List
 
 For a start I'll decompose all tasks in this section of the projet 's root `README.md`, before task management / scheduling is managed by a dedicated tool.
