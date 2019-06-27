@@ -52,3 +52,18 @@ Basically here, I soon understood that in order to actually have a Git Persisten
 * [`SWAGGER` TO `TYPESCRIPT`] The swagger typescript generator : https://www.npmjs.com/package/swagger-typescript-codegen 
 * [`TYPESCRIPT` TO `SWAGGER`] Re-generate `JSON` or `YAML` config file from Generated Source Code : https://www.npmjs.com/package/typescript-rest-swagger
 * [**`typescript-rest` is ExpressJS' Typesript Extension, perfectly fit for `SWAGGER` `<=>` `TYPESCRIPT`**] : https://github.com/thiagobustamante/typescript-rest
+* [**`RxJS/TypeScript`**] :  using rxjs installed with all modules, including those required for using `RxJS` in `TypeScript`, cf. https://rxjs.dev/guide/installation#all-module-types-cjs-es6-amd-typescript-via-npm
+
+Ouh, and an `OCI` container engine, `Docker`. With `Docker Compose`.
+
+# TODO List
+
+For a start I'll decompose all tasks in this section of the projet 's root `README.md`, before task management / scheduling is managed by a dedicated tool.
+
+* Implement a first RESTfull API Endpoint, using `typescipt-rest`, swagger generator, without any `RxJS`. This Endpoint will be a very simple allowing you to multiply any two positive or null integers.
+* Add a new Endpoint, that basically returns a list of text files, among a given set of files, inside a given folder :
+  * the endpoint will always return a map : 
+    * key being the path of the file, relative to workspace root,
+    * the mapped value being the actual files itself as binary content. The workspace is a folder inside the `OCI` container, in which the `RESTful API` runs.
+    
+
