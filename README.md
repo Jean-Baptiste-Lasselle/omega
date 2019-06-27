@@ -1,6 +1,9 @@
-# omega
+# Omega
 
-The Omega Server, is an evolution towards Angular 8, of the well known https://grapesjs.com
+`Omega`, is an evolution towards Angular 8, of the well known https://grapesjs.com. 
+It adds it a server-side, a distributed server-side, and makes it collaboration ready.
+The server side IS distributed, as you'll see, and out-of-the box, just because `git` is, distributed.
+
 
 # How it all started
 
