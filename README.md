@@ -64,7 +64,7 @@ Basically here, I soon understood that in order to actually have a Git Persisten
 yeah, I have as goal, to bring in dependency injection : 
 
 * As to the Angular Client, well dependency injection is builtin `Angular`
-* As to my `typescript-rest` / RESTful Endpoints, there is no depndency injection there.
+* As to my `TypeScript` / RESTful Endpoints, there is no depndency injection there.
 
 
 ## `Ops` Tech Stack Bill Of Material
@@ -79,12 +79,17 @@ So here is our bill of material :
   * An API Gateway to bind up all Endpoints, and manage subscribe plans, and centralize `OpenAPI` documentation. I'll use an API Gateway called `Gravitee.io`
   * One `docker-compose` service for each and every `REST API Endpoint`
   * One `docker-compose` service for statically serving the Angular Client from within inside a container endowed with the lightest production-ready HTTP statis server, my first (maybe not last) choice will be an `alpine:nginx` `OCI` base image. 
+* Aside `Omega`, antoher `docker-compose.yml` will provision infrastructure : 
+  * `Keycloak` to setup `O.I.D.C.` (`OpenID Connect`) Identity Provider
+  * `HashiCorp Vault`, to manage the Certification Authority Chain, in the target PKI, and manage TLS/SSL Certificates granted to each deployed `Omega` component. 
+
 
 # TODO List
 
 For a start I'll decompose all tasks in this section of the projet 's root `README.md`, before task management / scheduling is managed by a dedicated tool.
 
-* Implement a first RESTfull API Endpoint, using `typescript-rest`, swagger generator, without any `RxJS`. This Endpoint will be a very simple allowing you to multiply any two positive or null integers.
+* Implement a first RESTfull API Endpoint, using [`tsoa`](), swagger generator, without any `RxJS`. This Endpoint will be a very simple allowing you to multiply any two positive or null integers.
+* Add JWT authntication, then OpenID Connect, managed by Keycloak
 * Add a new Endpoint, that basically returns a list of text files, among a given set of files, inside a given folder :
   * the endpoint will always return a map : 
     * `key` being the path of the file, relative to workspace root,
