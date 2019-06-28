@@ -1,24 +1,37 @@
 # Omega
 
 `Omega`, is an evolution towards Angular 8, of the well known https://grapesjs.com. 
+
 It adds it a server-side, a distributed server-side, and makes it collaboration ready.
-The server side IS distributed, as you'll see, and out-of-the box, just because `git` is, distributed.
+
+The whole IS distributed, as you'll see, and out-of-the box, just because `git` is, distributed.
+
+Standing on the shoulders of giants.
 
 
 # How it all started
 
-As I was working on a software that had to send e-mails, based on beautiful templates. I found `MJML`, a markup language designed and standardized by `MailJet`, and I soon found a _wysiwyg_ `MJML` editor, `GrapesJS`.
-`GrapesJS` allow non-technical users (that barely know `HTML`, or a bit of web design, typically), to edit new email templates for their mailing campaigns, all on their own.
-That `MJML` editor was still is) a fork of [GrapesJS](https://grapesjs.com/), an `HTML` editor : 
+As I was working on a software that had to send e-mails, based on beautiful templates, I learned about `MJML`, a markup language designed and standardized by `MailJet`, in order to webdesign email templates, for mailing campaigns.
+
+I then found out about a _wysiwyg_ `MJML` editor, which happens to be a fork of `GrapesJS`.
+
+That `MJML` editor, fork of [GrapesJS](https://grapesjs.com/), `GrapesJS` allow non-technical users (that barely know `HTML`, or a bit of web design, typically), to edit new email templates for their mailing campaigns, all on their own.
+
+Which is exactly what I needed.
+
+So I began working with this `MJML` editor, fork of [GrapesJS](https://grapesjs.com/) : 
+
 * Indeed, my first need was to find out how (and where) my users would persist each new email templates (for a given mailing campaign)
-* So digging into the `MJML` _wysiwyg_ editor's documentation, I really quickly ended up on [the GrapesJS `HTML` wysiwyg editor](https://grapesjs.com/) 's documentation. And found out : 
+* So digging into the `MJML` _wysiwyg_ editor's behind the scene, I really quickly realized that its docuementation, was mainly reduced to that of its elder, [the `GrapesJS` `HTML` wysiwyg editor](https://grapesjs.com/) 's documentation. Now working on [the `GrapesJS` `HTML` wysiwyg editor](https://grapesjs.com/) 's documentation, I found out : 
   * that both [GrapesJS](https://grapesjs.com/) 's `HTML` and `MJML` _wysiwyg_ editors were using a Javascript plugin mechanisms, that allows any developer to implement his own persistence module. 
   * That this persistence module allows the developer to define how and where the editor's content is to be persited.
   * That a couple of Persistence Module are provided by the [GrapesJS](https://grapesjs.com/) project team, like modules allowing to persist your edited template to firebase, cf. https://github.com/artf/grapesjs-firestore .
 
 So starting from there I had one good idea, plus two goods reasons, to fork `GrapesJS`, and launch a new project :
 
-* **[The good idea] Make GrapesJS Collaboration-Ready (bring in a Git-based default Persistence Module)** : Well I was first astonsihed to find out that there are no Git oriented persistence Module, SO here I go with A good Idea, cause now people would be able to collaborate / validate on a given new `MJML` / `HTML` template ! (`MJML as Code` / `HTML as Code` , or wasn't it code in the first place...?). That it not only makes `GrapeJS` Collaboration-Ready, but it makes it _distributed_. : The `GrapesJS` initial Designer, still today, has a side company proposing SAAS hosted `GrapesJS` offers, where using the Using the Git Persistence Module, each collaborator uses his own server (the `Omega` server), most of the time a docker container on his own machine, and the git repos to persist and share with collaborators.  
+* **[The good idea] Make GrapesJS Collaboration-Ready (bring in a Git-based default Persistence Module)** : Well I was first astonsihed to find out that there are no Git oriented persistence Module, So here I go with a good idea, people being able to collaborate / validate on a given new `MJML` / `HTML` template ! (`MJML as Code` / `HTML as Code` , or wasn't it code in the first place...?). I immediately realised that bringing in a new persistence module based on a `git` storage, not only makes `GrapeJS` Collaboration-Ready, but it makes it _distributed_. : 
+  * The `GrapesJS` initial Designer, still today, has a side company proposing SAAS hosted `GrapesJS` offers, where persisting and collaborating on files by teams is made easy (or so I hope for the customers of that company).
+  * Using the Git Persistence Module, each collaborator uses his own server (the `Omega` server), most of the time a docker container on his own machine, and the git repos to persist and share with collaborators. No central Server needed here   
 * **[good reason no. 1] Bring in Dependency Injection** it's a pure client app : no server there. Plus it's implemented in pure old fashioned JavaScript. So here there's an opportunity turning that into a pure `Angular 8 PWA` (Progressive Web App). If only that, for the sake of dependency injection (Thankfully, `GrapesJS` initial designer code relatively neat,but still, it's real old style JavaScript)
 * **[good reason no. 2] Bring in a TDD Build Process** since it's pure JavaScript, it's like there are zero build steps, and zero build process at all, so about the test stack, ouch.. Here Another Reason to bring webpack and Karma / Mocha / Jest / Jasmine
 
