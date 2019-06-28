@@ -47,7 +47,9 @@ Basically here, I soon understood that in order to actually have a Git Persisten
   * inside a container which has git installed, why not a `NodeJS / TypeScript / Swagger / https://github.com/steveukx/git-js ` stack, 
   * and that way the Angular App can _`git clone "FIR_REPO_URI" && git add --all && git commit -m "message from omega user" && git push`_, just out of calling an `OpenAPI`-compliant `RESTful API`.
 
-# Tech Stack
+# `Dev+ops` Tech Stack
+
+## `Dev` Tech Stack Bill Of Material
 
 * `NVM`, 
 * `NodeJS`,
@@ -57,9 +59,7 @@ Basically here, I soon understood that in order to actually have a Git Persisten
 * [**`typescript-rest` is ExpressJS' Typesript Extension, perfectly fit for `SWAGGER` `<=>` `TYPESCRIPT`**] : https://github.com/thiagobustamante/typescript-rest
 * [**`RxJS/TypeScript`**] :  using rxjs installed with all modules, including those required for using `RxJS` in `TypeScript`, cf. https://rxjs.dev/guide/installation#all-module-types-cjs-es6-amd-typescript-via-npm
 
-Ouh, and an `OCI` container engine, `Docker`. With `Docker Compose`.
-
-### But there's one more thing
+**_But there's one more thing_**
 
 yeah, I have as goal, to bring in dependency injection : 
 
@@ -67,7 +67,11 @@ yeah, I have as goal, to bring in dependency injection :
 * As to my `typescript-rest` / RESTful Endpoints, there is no depndency injection there.
 
 
-### Infrastructure Tech Stack
+## `Ops` Tech Stack Bill Of Material
+
+All that dev stack will give us _artifacts_ (_packages_, _stuff_, _bumblebees_, whatever you call them) to deploy. Well we will containerize all those artifacts, to deploy and operate them in production.
+
+So here is our bill of material :  
 
 * A single host deployement target, consisting of a Virutal MAchine in which are provisioned `docker` and `docker-compose`.
 * `Omega` si provisioned with a `docker-compose.yml` file defining the following services : 
