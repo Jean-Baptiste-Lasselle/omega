@@ -25,7 +25,8 @@ So I began working with this `MJML` editor, fork of [GrapesJS](https://grapesjs.
 * So digging into the `MJML` _wysiwyg_ editor's behind the scene, I really quickly realized that its docuementation, was mainly reduced to that of its elder, [the `GrapesJS` `HTML` wysiwyg editor](https://grapesjs.com/) 's documentation. Now working on [the `GrapesJS` `HTML` wysiwyg editor](https://grapesjs.com/) 's documentation, I found out : 
   * that both [GrapesJS](https://grapesjs.com/) 's `HTML` and `MJML` _wysiwyg_ editors were using a Javascript plugin mechanisms, that allows any developer to implement his own persistence module. 
   * That this persistence module allows the developer to define how and where the editor's content is to be persited.
-  * That a couple of Persistence Module are provided by the [GrapesJS](https://grapesjs.com/) project team, like modules allowing to persist your edited template to firebase, cf. https://github.com/artf/grapesjs-firestore .
+  * That a couple of Persistence Module are provided by the [GrapesJS](https://grapesjs.com/) project team, like modules allowing to persist your edited template to [firebase's firestore saas offer](https://firebase.google.com/docs/firestore), cf. https://github.com/artf/grapesjs-firestore. That storage service, behind the scene is a no-sql document-oriented database. Well you can think of it as if it was `MongoDB` (And now I'm thinkng about Richard Stallman...).
+  
 
 So starting from there I had one good idea, plus two goods reasons, to fork `GrapesJS`, and launch a new project :
 
