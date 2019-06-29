@@ -74,10 +74,10 @@ Basically here, I soon understood that in order to actually have a Git Persisten
 
 **_But there's one more thing_**
 
-yeah, I have as goal, to bring in dependency injection : 
+Yeah, I have as goal, to bring in dependency injection : 
 
 * As to the Angular Client, well dependency injection is builtin `Angular`
-* As to my `TypeScript` / RESTful Endpoints, there is no depndency injection there. I'll bring dependency injection here using http://inversify.io/ . After I have a first stable implementation, I will add a comparison matrix : I will code, test, and build, a first stable version, and along the way, I will naturally identify the requirements of the Dependency Injection Framework to choose for `Omega`. In other words, what is important is what the `Omega` software needs, not what I, the architect, like best. 
+* As to my `TypeScript` / RESTful Endpoints, there is no depndency injection there. I'll bring dependency injection here using http://inversify.io/ (and then I'll try https://github.com/nestjs/nest) . `InversifyJS` and `NestJS` appeared to be the two most suitable, and mature existing DEpendency Injection Frameworks, for a `NodeJS` "server side".
 
 
 ## `Ops` Tech Stack Bill Of Material
