@@ -68,9 +68,11 @@ Basically here, I soon understood that in order to actually have a Git Persisten
 * `NVM`, 
 * `NodeJS`,
 * `typescript`,
-* [`SWAGGER` TO `TYPESCRIPT`] The of the swagger typescript generator : https://github.com/azure/autorest.typescript#usage . I chose that one because it probablyu has the best support, and has a nice isomorphic property. Nevertheless, there is no use of dependency injection in the generated code, so I'll have to automate additional build steps to modify the code, and "inject dependency injection". I'll compare with [`tsoa`](https://github.com/lukeautry/tsoa#dependency-injection-or-ioc), which supports "injecting dependency injection", and works with a template concept so there's potential customization features here).
-* [`TYPESCRIPT` TO `SWAGGER`] Re-generate `JSON` or `YAML` config file from Generated Source Code : https://www.npmjs.com/package/typescript-rest-swagger  . But also  [`tsoa`](https://github.com/lukeautry/tsoa#generate);
+* [`SWAGGER` TO `TYPESCRIPT`] I'll use [`tsoa`](https://github.com/lukeautry/tsoa#dependency-injection-or-ioc), which supports "injecting dependency injection", has good community (secruing support), and works with a template concept (so there's potential customization features here).
+* [`TYPESCRIPT` TO `SWAGGER`] Re-generate `JSON` or `YAML` config file from Generated Source Code : Also  [`tsoa`](https://github.com/lukeautry/tsoa#generate);
 * [**`RxJS/TypeScript`**] :  using rxjs installed with all modules, including those required for using `RxJS` in `TypeScript`, cf. https://rxjs.dev/guide/installation#all-module-types-cjs-es6-amd-typescript-via-npm
+
+About `tsoa`, what is perfect for Omega, is that tsoa documents on its root `README.md` how to handle file upload with RESTful API generated : https://github.com/lukeautry/tsoa#uploading-files
 
 **_But there's one more thing_**
 
