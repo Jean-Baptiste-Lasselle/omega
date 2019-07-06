@@ -68,16 +68,15 @@ Basically here, I soon understood that in order to actually have a Git Persisten
 * `NVM`, 
 * `NodeJS`,
 * `typescript`,
-* [`SWAGGER` TO `TYPESCRIPT`] The swagger typescript generator : https://www.npmjs.com/package/swagger-typescript-codegen 
-* [`TYPESCRIPT` TO `SWAGGER`] Re-generate `JSON` or `YAML` config file from Generated Source Code : https://www.npmjs.com/package/typescript-rest-swagger
-* [**`typescript-rest` is ExpressJS' Typesript Extension, perfectly fit for `SWAGGER` `<=>` `TYPESCRIPT`**] : https://github.com/thiagobustamante/typescript-rest
+* [`SWAGGER` TO `TYPESCRIPT`] The of the swagger typescript generator : https://github.com/azure/autorest.typescript#usage . I chose that one because it probablyu has the best support, and has a nice isomorphic property. Nevertheless, there is no use of dependency injection in the generated code, so I'll have to automate additional build steps to modify the code, and "inject dependency injection". I'll compare with [`tsoa`](https://github.com/lukeautry/tsoa#dependency-injection-or-ioc), which supports "injecting dependency injection", and works with a template concept so there's potential customization features here).
+* [`TYPESCRIPT` TO `SWAGGER`] Re-generate `JSON` or `YAML` config file from Generated Source Code : https://www.npmjs.com/package/typescript-rest-swagger  . But also  [`tsoa`](https://github.com/lukeautry/tsoa#generate);
 * [**`RxJS/TypeScript`**] :  using rxjs installed with all modules, including those required for using `RxJS` in `TypeScript`, cf. https://rxjs.dev/guide/installation#all-module-types-cjs-es6-amd-typescript-via-npm
 
 **_But there's one more thing_**
 
 Yeah, I have as goal, to bring in dependency injection : 
 
-* As to the Angular Client, well dependency injection is builtin `Angular`
+* As to the Angular Client, well dependency injection is _builtin_ `Angular`
 * As to my `TypeScript` / RESTful Endpoints, there is no depndency injection there. I'll bring dependency injection here using http://inversify.io/ (and then I'll try https://github.com/nestjs/nest) . `InversifyJS` and `NestJS` appeared to be the two most suitable, and mature existing DEpendency Injection Frameworks, for a `NodeJS` "server side".
 
 
