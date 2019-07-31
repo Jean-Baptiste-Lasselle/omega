@@ -1,6 +1,6 @@
 ## Special thanks
 
-* To @larsdecher , for letting me know about https://github.com/bures/mjml4-in-browser (and the first git star :) ) : 
+* To [@larsdecher](https://github.com/larsdecker) , for letting me know about https://github.com/bures/mjml4-in-browser : 
   * Indeed as I explain below, I have worked on projects, in which managing email campaigns, is a feature. And it happens to be the case in many of the projects I work on, starting with every time I commit to setup a devops infrastruture and team. 
   * So I'am still interested in find out about new tools that process `MJML`. 
   * What I wanna poin out here, is that htere might be a new approach to emails campaigns, considering those as involving content management. S we're speaking about a CMS to manage emails templates, right? And what is up today in the CMS world ? Headless CMS. Static sites generators turn into Static emails generators. And frol there we can hink of multi channel Headless CMS, that is, a Headless CMS able to manage multiple media, not only web site, but emails, facebook posts, tweets, @media.com articles, etc;... ALl relying on a set of static media generators, one generator for each media
